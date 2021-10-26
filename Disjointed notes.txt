@@ -1,0 +1,20 @@
+Chapter 3
+Messaging Systems
+
+Messaging makes applications loosely coupled by communicating asynchronously, 
+which also makes the communication more reliable 
+because the two applications do not have to be running at the same time. 
+
+Messaging Overview:
+*	Channels - Message Channels is a virtual pipe that connects a sender to a receiver.
+*	Messages - An atomic packet of data that can be transmitted on a channel.
+		A sender application will try repeatedly to deliver the message until it succeeds.
+*	Pipes and Filters - this architecture describes how multiple processing steps 
+		can be chained together using channels. Useful fx. for receivers expecting different
+		formats than that of the sender's.
+*	Routing - A Message Router chooses what channels to send a message along for it to get
+		to its intended target or at least the next router.
+*	Transformation - A Message Translator (intermediate filter) converts the message from 
+		one format to another.
+*	Endpoints - coordinated Message Endpoints are like a bridge code that enables the 
+		application to send and receive messages.
