@@ -21,7 +21,31 @@ Messaging Overview:
 		
 Extrapolated keywords of note:
 *	Sender and receiver,
-*	Atomic Packet,
-*	Formats,
+*	Atomic Packet and data,
+*	Formats and translation,
 *	Architecture approaches,
 
+Message channels are distinguished by the type of information they carry.
+
+Message Endpoints can be directly connected to each other or go through a central hub.
+
+The number and purpose of channels available tend to be fixed at deployment time because
+other applications than the one creating the channels during runtime must know of them.
+	Exceptions do exist.
+
+Similar terms:
+* Sender and Receiver
+* Producer and Consumer 
+* Publisher and Subscriber
+* Requester and Provider
+
+An application that sends or receives messages may be called a client of the messaging system; 
+	a more specific term is endpoint or message endpoint.
+	
+Channel Name Example:
+	MyCorp/Prod/OrderProcessing/NewOrders.
+
+There are two different kinds of message channels: 
+Point-to-Point Channels and Publish-Subscribe Channels (106). 
+Mixing different data types on the same channel can cause a lot of confusion; 
+	to avoid this, use separate Datatype Channels.
