@@ -18,3 +18,10 @@ Messaging Overview:
 		one format to another.
 *	Endpoints - coordinated Message Endpoints are like a bridge code that enables the 
 		application to send and receive messages.
+		
+Extrapolated keywords of note:
+*	Sender and receiver,
+*	Atomic Packet,
+*	Formats,
+*	Architecture approaches,
+
