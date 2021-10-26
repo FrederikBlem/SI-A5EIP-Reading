@@ -21,9 +21,10 @@ Messaging Overview:
 		
 Extrapolated keywords of note:
 *	Sender and receiver,
-*	Atomic Packet and data,
+*	Atomic Packet (*Header* - info on data description & origin & destination etc., *Body*),
 *	Formats and translation,
 *	Architecture approaches,
+*	Administration Tools (J2EE JMS, IBM Websphere MQ, Microsoft Message Queue Explorer),
 
 Message channels are distinguished by the type of information they carry.
 
@@ -49,3 +50,11 @@ There are two different kinds of message channels:
 Point-to-Point Channels and Publish-Subscribe Channels (106). 
 Mixing different data types on the same channel can cause a lot of confusion; 
 	to avoid this, use separate Datatype Channels.
+	
+Applications that wish to use Messaging but do not have access to a messaging 
+client can still connect to the messaging system using Channel Adapters.
+
+A well-designed set of channels forms a Message Bus that acts like a messaging API
+for a whole group of applications.
+
+Message Channels are created by various Admin Tools and applications make instances of them.
