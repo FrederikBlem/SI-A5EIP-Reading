@@ -7,7 +7,7 @@ A reading task centered on Enterprise Integration Patterns.
 * [Chapter 3: Messaging Systems](https://www.enterpriseintegrationpatterns.com/docs/EnterpriseIntegrationPatterns_HohpeWoolf_ch03.pdf)
 * [glossary](https://www.google.com/search?q=glossary&oq=glossary&aqs=chrome..69i57j0l5.2261j0j7&sourceid=chrome&ie=UTF-8)
 
-##12 terms essential for (personal) concept understanding and glossary.
+## 12 terms essential for (personal) concept understanding and glossary.
 
 1. Channels
 2. Messages
