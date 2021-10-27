@@ -42,7 +42,7 @@ other applications than the one creating the channels during runtime must know o
 5. __Endpoints__
 <br>"Coordinated Message Endpoints are like a bridge code that enables the application to send and receive messages."
 <br>Message Endpoints can be directly connected to each other or go through a central hub.
-6. Formats and translation
+6. __Formats and translation__
 <br>Because different applications require different formats, translation or transformation is necessary.
 <br>Additionally the format specified for the system is called the Canonical Data Model (also see page 68 examples).
 7. __Messages__
