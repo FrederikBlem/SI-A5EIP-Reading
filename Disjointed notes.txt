@@ -8,8 +8,8 @@ because the two applications do not have to be running at the same time.
 Messaging Overview:
 *	Channels - Message Channels is a virtual pipe that connects a sender to a receiver.
 *	Messages - An atomic packet of data that can be transmitted on a channel.
-		A sender application will try repeatedly to deliver the message until it succeeds.
-*	Pipes and Filters - this architecture describes how multiple processing steps 
+		A sender application will try repeatedly to deliver the message until it succeeds. (Transactional?)
+*	Pipes and Filters - this architecture describes how multiple processing steps (filters)
 		can be chained together using channels. Useful fx. for receivers expecting different
 		formats than that of the sender's.
 *	Routing - A Message Router chooses what channels to send a message along for it to get
@@ -22,7 +22,11 @@ Messaging Overview:
 Extrapolated keywords of note:
 *	Sender and receiver,
 *	Atomic Packet (*Header* - info on data description & origin & destination etc., *Body*),
-*	Formats and translation,
+*	Message Types (Command Message for procedure invokation, Document Message for
+		passing data, etc.)
+*	Formats and translation (format specified is called Canonical Data Model (also see
+		page 68 examples)),
+*	Pipeline Processing or Parallel Processing (instead of Sequential Processing),
 *	Architecture approaches,
 *	Administration Tools (J2EE JMS, IBM Websphere MQ, Microsoft Message Queue Explorer),
 
@@ -58,3 +62,15 @@ A well-designed set of channels forms a Message Bus that acts like a messaging A
 for a whole group of applications.
 
 Message Channels are created by various Admin Tools and applications make instances of them.
+
+Typically, a  Message Channel provides language, platform, and location independence between the filters.
+This affords us the flexibility to move a processing step to a different machine for dependency, maintenance, 
+or performance  reasons.
+
+One of the potential downsides of a Pipes and Filters architecture is the larger number of required channels. 
+First, channels may not be an unlimited resource, since channels provide buffering and other functions that 
+consume memory and CPU cycles. Also, publishing a message to a channel involves a certain amount of overhead 
+because the data has to be translated from the application-internal format into the messaging 
+infrastructure's own format. At the receiving end, this process has to be reversed. 
+If we are using a long chain of filters, we are paying for the gain in flexibility with potentially lower 
+performance due to repeated message data conversion.
