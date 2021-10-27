@@ -65,6 +65,10 @@ other applications than the one creating the channels during runtime must know o
   * Publisher and Subscriber
   * Requester and Provider
  <br>Knowing the differences is relevant because there are two different kinds of message channels: 
-  Point-to-Point Channels and Publish-Subscribe Channels. 
+  Point-to-Point Channels and Publish-Subscribe Channels.
+  <br>The sender either sends messages on an all-purpose channel or to specific channels depending on the architectural pattern used.
+  <br>The receiver either is built with or without sorting and can in some cases send a message back into a channel if it gets something unintended.
 13. __Transformation__
 <br>A Message Translator (intermediate filter) converts the message from one format to another.
+
+In conclusion there are many approaches to messaging with some more popular than others. It's all up to choosing the right one.
